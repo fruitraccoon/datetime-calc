@@ -1,0 +1,25 @@
+{
+  "name": "datetime-calc",
+  "version": "0.0.1",
+  "description": "Simple arithmetic calculation DSL to enter dates and times",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fruitraccoon/datetime-calc.git"
+  },
+  "keywords": [
+    "date",
+    "time",
+    "calculation",
+    "arithmetic"
+  ],
+  "author": "FruitRaccoon <fruitraccoon@outlook.com>",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/fruitraccoon/datetime-calc/issues"
+  },
+  "homepage": "https://github.com/fruitraccoon/datetime-calc#readme"
+}
