@@ -21,5 +21,8 @@
   "bugs": {
     "url": "https://github.com/fruitraccoon/datetime-calc/issues"
   },
-  "homepage": "https://github.com/fruitraccoon/datetime-calc#readme"
+  "homepage": "https://github.com/fruitraccoon/datetime-calc#readme",
+  "devDependencies": {
+    "typescript": "^3.5.2"
+  }
 }
