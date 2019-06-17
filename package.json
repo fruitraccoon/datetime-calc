@@ -8,7 +8,8 @@
   "scripts": {
     "build": "rollup -c",
     "watch": "rollup -cw",
-    "test": "jest"
+    "test": "jest",
+    "format": "prettier --write \"src/**/*.{ts,tsx,js,jsx,json,css,less,scss}\""
   },
   "repository": {
     "type": "git",
@@ -27,6 +28,7 @@
   },
   "homepage": "https://github.com/fruitraccoon/datetime-calc#readme",
   "devDependencies": {
+    "prettier": "^1.18.2",
     "rollup": "^1.15.6",
     "rollup-plugin-typescript2": "^0.21.1",
     "typescript": "^3.5.2"
