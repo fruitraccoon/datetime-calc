@@ -2,8 +2,12 @@
   "name": "datetime-calc",
   "version": "0.0.1",
   "description": "Simple arithmetic calculation DSL to enter dates and times",
-  "main": "index.js",
+  "main": "dist/index.js",
+  "module": "dist/index.es.js",
+  "types": "dist/index.d.ts",
   "scripts": {
+    "build": "rollup -c",
+    "watch": "rollup -cw",
     "test": "jest"
   },
   "repository": {
@@ -23,6 +27,8 @@
   },
   "homepage": "https://github.com/fruitraccoon/datetime-calc#readme",
   "devDependencies": {
+    "rollup": "^1.15.6",
+    "rollup-plugin-typescript2": "^0.21.1",
     "typescript": "^3.5.2"
   }
 }
