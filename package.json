@@ -1,7 +1,7 @@
 {
   "name": "datetime-calc",
   "version": "0.0.1",
-  "description": "Simple arithmetic calculation DSL to enter dates and times",
+  "description": "Simple arithmetic calculation DSL to use when entering dates",
   "main": "dist/index.js",
   "module": "dist/index.es.js",
   "types": "dist/index.d.ts",
