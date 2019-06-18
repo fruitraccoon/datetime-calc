@@ -1,6 +1,6 @@
 import { buildDateParser } from './dateParser';
 
-const testDate = new Date('2019-01-01T00:00:00');
+const testDate = new Date('2019-01-01T01:02:03');
 const fakeCurrentDate = () => testDate;
 
 describe('parse tests for delimited date input', () => {
@@ -150,5 +150,14 @@ describe('parse tests for non-delimited date input', () => {
     const result = p.parse('12212010');
     expect(result.status).toBe(true);
     expect(result.status && result.value).toStrictEqual(new Date('2010-12-21T00:00:00'));
+  });
+});
+
+describe('parse tests for special case date input', () => {
+  it('Returns current date for "t"', () => {
+    const p = buildDateParser(fakeCurrentDate);
+    const result = p.parse('t');
+    expect(result.status).toBe(true);
+    expect(result.status && result.value).toStrictEqual(new Date('2019-01-01T00:00:00'));
   });
 });

@@ -14,6 +14,13 @@ export function buildDateParser(getCurrentDate: () => Date, options?: IDateParse
   const twoDigits = P.regexp(/\d{2}/).desc('Two digits');
   const fourDigits = P.regexp(/\d{4}/).desc('Four digits');
 
+  const specialCaseDateParser = P.string('t').map(() => {
+    // "t" for "today" - current date at midnight
+    const d = getCurrentDate();
+    d.setHours(0, 0, 0, 0);
+    return d;
+  });
+
   const delimitedDateParser = P.seq(
     digitsTyped,
     dateSep,
@@ -76,7 +83,7 @@ export function buildDateParser(getCurrentDate: () => Date, options?: IDateParse
     }
   });
 
-  return P.alt(delimitedDateParser, nonDelimitedDateParser).chain(d =>
+  return P.alt(specialCaseDateParser, delimitedDateParser, nonDelimitedDateParser).chain(d =>
     d === null ? P.fail('Invalid') : P.succeed(d)
   );
 }
