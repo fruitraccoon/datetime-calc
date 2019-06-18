@@ -1,7 +1,7 @@
-import run from './index';
+import { buildParser } from './index';
 
 describe('Interface tests', () => {
-  it('Has a default export', () => {
-    expect(run()).toBe(true);
+  it('Has a buildParser export', () => {
+    expect(buildParser()).not.toBeFalsy;
   });
 });

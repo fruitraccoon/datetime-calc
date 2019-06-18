@@ -1,3 +1,1 @@
-export default function() {
-  return true;
-}
+export { default as buildParser, IParser, IParseOptions } from './buildParser';
