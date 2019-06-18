@@ -29,11 +29,16 @@
   "homepage": "https://github.com/fruitraccoon/datetime-calc#readme",
   "devDependencies": {
     "@types/jest": "^24.0.15",
+    "@types/parsimmon": "^1.10.0",
+    "intl": "^1.2.5",
     "jest": "^24.8.0",
     "prettier": "^1.18.2",
     "rollup": "^1.15.6",
     "rollup-plugin-typescript2": "^0.21.1",
     "ts-jest": "^24.0.2",
     "typescript": "^3.5.2"
+  },
+  "dependencies": {
+    "parsimmon": "^1.12.0"
   }
 }
