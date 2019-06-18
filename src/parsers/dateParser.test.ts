@@ -1,7 +1,6 @@
 import { buildDateParser } from './dateParser';
 
-const testDate = new Date('2019-01-01T01:02:03');
-const fakeCurrentDate = () => testDate;
+const fakeCurrentDate = () => new Date('2019-01-01T01:02:03');
 
 describe('parse tests for delimited date input', () => {
   it('Returns date for three delimited values using US locale', () => {

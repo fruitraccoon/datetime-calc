@@ -1,4 +1,5 @@
 import * as P from 'parsimmon';
+import { digits, digitsTyped } from './coreParsers';
 
 export interface IDateParserOptions {
   localeOverride?: string | string[];
@@ -9,8 +10,6 @@ export function buildDateParser(getCurrentDate: () => Date, options?: IDateParse
 
   const dateSep = P.oneOf(',-/ .').atLeast(1);
 
-  const digits = P.regex(/\d+/).desc('Digits');
-  const digitsTyped = digits.map(n => Number.parseInt(n, 10));
   const twoDigits = P.regexp(/\d{2}/).desc('Two digits');
   const fourDigits = P.regexp(/\d{4}/).desc('Four digits');
 
