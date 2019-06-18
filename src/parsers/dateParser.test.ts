@@ -159,4 +159,11 @@ describe('parse tests for special case date input', () => {
     expect(result.status).toBe(true);
     expect(result.status && result.value).toStrictEqual(new Date('2019-01-01T00:00:00'));
   });
+
+  it('Returns current date for "T"', () => {
+    const p = buildDateParser(fakeCurrentDate);
+    const result = p.parse('T');
+    expect(result.status).toBe(true);
+    expect(result.status && result.value).toStrictEqual(new Date('2019-01-01T00:00:00'));
+  });
 });

@@ -13,7 +13,7 @@ export function buildDateParser(getCurrentDate: () => Date, options?: IDateParse
   const twoDigits = P.regexp(/\d{2}/).desc('Two digits');
   const fourDigits = P.regexp(/\d{4}/).desc('Four digits');
 
-  const specialCaseDateParser = P.string('t').map(() => {
+  const specialCaseDateParser = P.oneOf('tT').map(() => {
     // "t" for "today" - current date at midnight
     const d = getCurrentDate();
     d.setHours(0, 0, 0, 0);
