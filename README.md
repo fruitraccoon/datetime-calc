@@ -2,6 +2,9 @@
 
 _Simple arithmetic calculation DSL to use when entering dates_
 
+[![npm](https://img.shields.io/npm/v/datetime-calc.svg)](https://www.npmjs.com/package/datetime-calc)
+[![npm bundle size (minified + gzip)](https://img.shields.io/bundlephobia/minzip/datetime-calc.svg?style=flat)](https://bundlephobia.com/result?p=datetime-calc)
+
 This package utilised the current date to allow text in a simple Domain Specific Language to be parsed into a Date.  The intended usage is to handle text entered into a form input field, to allow a more flexible way to enter date values.
 
 ## What it does
