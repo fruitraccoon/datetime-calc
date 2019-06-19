@@ -12,6 +12,10 @@
     "format": "prettier --write \"src/**/*.{ts,tsx,js,jsx,json,css,less,scss}\"",
     "explore": "source-map-explorer dist/index.js"
   },
+  "files": [
+    "dist",
+    "LICENSE"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/fruitraccoon/datetime-calc.git"
